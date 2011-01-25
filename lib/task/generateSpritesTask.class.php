@@ -32,7 +32,7 @@ EOF;
     $params[] = "--sprite-png-ie6";
     $params[] = "--document-root-dir-path ".sfConfig::get("sf_web_dir");
 
-    $script = "cd ".dirname(__FILE__)."/../vendor/smartsprites/ && ./smartsprites.sh ";
+    $script = "unset DISPLAY && cd ".dirname(__FILE__)."/../vendor/smartsprites/ && ./smartsprites.sh ";
 
     $command = $script.join(" ", $params);
 
